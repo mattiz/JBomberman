@@ -50,11 +50,12 @@ public class ScreenManager {
 	 * @param displayMode which displaymode to set the window
 	 */
 	public void setFullScreen( DisplayMode displayMode ) {
+		window.dispose();
 		window.setUndecorated( true );
 		window.setResizable( false );
 
 		device.setFullScreenWindow( window );
-
+        window.setVisible(true);
 		if( displayMode != null && device.isDisplayChangeSupported() ) {
 			try {
 				device.setDisplayMode(displayMode);

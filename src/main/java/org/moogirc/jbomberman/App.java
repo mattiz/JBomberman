@@ -22,7 +22,7 @@ public class App {
 		}
 
 		JFrame window = sm.getWindow();
-
+		
 		Graphics2D g2 = (Graphics2D) window.getGraphics();
 
 		g2.drawString( "Hello", 20, 20 );
