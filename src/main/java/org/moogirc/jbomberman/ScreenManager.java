@@ -53,17 +53,16 @@ public class ScreenManager {
 		window.dispose();
 		window.setUndecorated( true );
 		window.setResizable( false );
-
+		
 		device.setFullScreenWindow( window );
-        window.setVisible(true);
 		if( displayMode != null && device.isDisplayChangeSupported() ) {
 			try {
-				device.setDisplayMode(displayMode);
-				
+				device.setDisplayMode(displayMode);				
 			} catch (IllegalArgumentException ex) {
 				// ignore - illegal mode for this device
 			}
 		}
+        window.setVisible(true);
 	}
 
 

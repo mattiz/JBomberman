@@ -2,6 +2,8 @@ package org.moogirc.jbomberman;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.BufferCapabilities.FlipContents;
+import java.awt.image.BufferStrategy;
 
 
 /**
@@ -16,15 +18,34 @@ public class App {
 		DisplayMode modes[] = sm.getCompatibleDisplayModes();
 
 		for( DisplayMode mode : modes ) {
-			if( mode.getWidth() == 640 && mode.getHeight() == 480 ) {
+			if( mode.getWidth() == 1680 && mode.getHeight() == 1050 ) {
 				sm.setFullScreen( mode );
+				break;
 			}
 		}
 
 		JFrame window = sm.getWindow();
-		
-		Graphics2D g2 = (Graphics2D) window.getGraphics();
-
-		g2.drawString( "Hello", 20, 20 );
+		window.setBackground(Color.black);
+		window.setForeground(Color.yellow);
+		BufferCapabilities bc = new BufferCapabilities(new ImageCapabilities(true), new ImageCapabilities(true), FlipContents.BACKGROUND);
+		window.createBufferStrategy(2, bc);
+		BufferStrategy bs = window.getBufferStrategy();
+		for(int i = 0; i < 100; i++) {
+			Graphics g = bs.getDrawGraphics();
+			if(!bs.contentsLost()) {
+				render(g, i);
+				bs.show();
+				g.dispose();
+			}
+			try {
+				Thread.sleep(10);
+			} catch (InterruptedException ie) {
+			}
+		}
+		System.exit(0);
+	}
+	
+	public static void render(Graphics g, int i) {
+		g.fill3DRect(220+(i*5), 220+(i*5), 220, 220, true);
 	}
 }
