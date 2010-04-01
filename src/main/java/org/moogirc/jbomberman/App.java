@@ -24,10 +24,13 @@ public class App {
 			}
 		}
 
+		SoundManager soundmanager = new SoundManager("../JBomberman/resources/AUTORUN.WAV", 0.0f);
+		soundmanager.start();
 		JFrame window = sm.getWindow();
 		window.setBackground(Color.black);
 		window.setForeground(Color.yellow);
-		BufferCapabilities bc = new BufferCapabilities(new ImageCapabilities(true), new ImageCapabilities(true), FlipContents.BACKGROUND);
+		BufferCapabilities bc = new BufferCapabilities(new ImageCapabilities(true), 
+				new ImageCapabilities(true), FlipContents.BACKGROUND);
 		window.createBufferStrategy(2, bc);
 		BufferStrategy bs = window.getBufferStrategy();
 		for(int i = 0; i < 100; i++) {
