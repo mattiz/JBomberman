@@ -1,0 +1,16 @@
+JBomberman are a reimplementation of the game Atomic Bomberman. The main goals will be to make the game look and feel as the original one, but add features like TCP/IP networking, support for new operating systems, and so on.
+
+
+Build instructions:
+---------------------
+mvn clean install -Darch=<arch>
+
+where arch could be one of the following: linux32, linux64, win32, win64, mac
+
+Run with the shell script startgame.sh
+
+
+Create projects for your IDE:
+-------------------------------
+Intellij IDEA	: mvn idea:idea
+Eclipse			: mvn eclipse:eclipse
