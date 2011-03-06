@@ -1,7 +1,7 @@
 package org.moogirc.jbomberman;
 
 
-import org.moogirc.jbomberman.gamestates.*;
+import org.moogirc.jbomberman.states.*;
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.*;
 

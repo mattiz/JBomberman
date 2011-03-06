@@ -1,3 +1,4 @@
 #!/bin/bash
 
-java -cp "target/lib/*" -Djava.library.path=target/natives/ org.moogirc.jbomberman.JBomberman
+cd target
+java -cp "lib/*" -Djava.library.path=natives org.moogirc.jbomberman.JBomberman

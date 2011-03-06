@@ -1,4 +1,4 @@
-package org.moogirc.jbomberman.gamestates;
+package org.moogirc.jbomberman.states;
 
 
 import org.moogirc.jbomberman.*;

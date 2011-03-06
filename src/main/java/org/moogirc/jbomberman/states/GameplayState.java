@@ -1,6 +1,8 @@
-package org.moogirc.jbomberman.gamestates;
+package org.moogirc.jbomberman.states;
 
 
+import org.moogirc.jbomberman.boards.*;
+import org.moogirc.jbomberman.objects.*;
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.*;
 
@@ -12,6 +14,7 @@ import org.newdawn.slick.state.*;
  */
 public class GameplayState extends BasicGameState {
 	private int stateID = -1;
+	private Board board;
 
 
 	public GameplayState( int stateID ) {
@@ -25,15 +28,17 @@ public class GameplayState extends BasicGameState {
 
 
 	public void init( GameContainer gc, StateBasedGame sbg ) throws SlickException {
+		board = BoardFactory.createBoard( "test" );
+		board.addGameObject( new Player() );
 	}
 
 
 	public void update( GameContainer gc, StateBasedGame sbg, int delta ) throws SlickException {
-		Input input = gc.getInput();
+		board.update( gc, sbg, delta );
 	}
 
 
 	public void render( GameContainer gc, StateBasedGame sbg, Graphics g ) throws SlickException {
-		g.drawString( "Gameplay", 270, 200 );
+		board.render( gc, sbg, g );
 	}
 }
