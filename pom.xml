@@ -56,7 +56,7 @@
 
 				<executions>
 					<execution>
-						<id>copy-installed</id>
+						<stateID>copy-installed</stateID>
 						<phase>install</phase>
 						<goals>
 							<goal>copy</goal>
@@ -75,7 +75,7 @@
 					</execution>
 
 					<execution>
-						<id>unpack</id>
+						<stateID>unpack</stateID>
 						<phase>generate-resources</phase>
 						<goals>
 							<goal>unpack</goal>
@@ -96,7 +96,7 @@
 					</execution>
 
 					<execution>
-						<id>copy-dependencies</id>
+						<stateID>copy-dependencies</stateID>
 						<phase>install</phase>
 						<goals>
 							<goal>copy-dependencies</goal>
@@ -117,12 +117,12 @@
 
 	<repositories>
 		<repository>
-			<id>b2s-repo</id>
+			<stateID>b2s-repo</stateID>
 			<url>http://b2s-repo.googlecode.com/svn/trunk/mvn-repo</url>
 		</repository>
 
 		<repository>
-			<id>slick-repo</id>
+			<stateID>slick-repo</stateID>
 			<url>http://slick.cokeandcode.com/mavenrepo</url>
 		</repository>
 	</repositories>

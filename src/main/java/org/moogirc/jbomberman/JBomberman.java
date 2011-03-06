@@ -1,32 +1,34 @@
 package org.moogirc.jbomberman;
 
 
+import org.moogirc.jbomberman.gamestates.*;
 import org.newdawn.slick.*;
+import org.newdawn.slick.state.*;
 
 
 /**
+ * The main class that set up states and invoke the game
+ * 
  * @author Mathias Bjerke <mathias@verida.no>
  */
-public class JBomberman extends BasicGame {
+public class JBomberman extends StateBasedGame {
+	public static final int MAIN_MENU_STATE = 0;
+	public static final int GAMEPLAY_STATE  = 1;
+	public static final String GAME_TITLE = "JBomberman";
+
+
 	public JBomberman() {
-		super( "JBomberman" );
+		super( GAME_TITLE );
+
+		addState( new MainMenuState( MAIN_MENU_STATE ) );
+		addState( new GameplayState( GAMEPLAY_STATE ) );
+		enterState( MAIN_MENU_STATE );
 	}
 
 
-	@Override
-	public void init( GameContainer gc ) throws SlickException {
-
-	}
-
-
-	@Override
-	public void update( GameContainer gc, int delta ) throws SlickException {
-		Input input = gc.getInput();
-	}
-
-
-	public void render( GameContainer gc, Graphics g ) throws SlickException {
-		g.drawString( "Heisann verden", 300, 200 );
+	public void initStatesList( GameContainer gameContainer ) throws SlickException {
+		getState( MAIN_MENU_STATE ).init( gameContainer, this );
+		getState( GAMEPLAY_STATE ).init( gameContainer, this );
 	}
 
 
