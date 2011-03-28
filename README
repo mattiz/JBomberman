@@ -15,5 +15,15 @@ Create projects for your IDE:
 Intellij IDEA	: mvn idea:idea
 Eclipse		: mvn eclipse:eclipse
 
-NB! For Eclipse the M2_REPO  classpath variable has to be set to the local repository (e.g. ~/.m2/repository) in the project 
-          - Java Build Path -> Libraries -> Add Variable -> Configure Variables -> New.
+
+--------------------------------
+Eclipse post mvn configuration:
+--------------------------------
+
+1. Open Eclipse
+2. Go to File -> Import -> General -> Existing Projects into Workspace -> Select Project root directory (e.g. /path/JBomberman) -> Next.
+3. Configure the M2_REPO classpath:
+   a. Right-click project -> Properties -> Java Build Path -> Libraries -> Add Variable -> Configure Variables -> New.
+   b. Enter M2_REPO as name and the path to the local maven repository (default = ~/.m2/repository/).
+4. Select Yes to rebuild and your done!
+          - 
