@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+	<title>JBomberman</title>
+
+	<resource>
+		<id>red-bomberman</id>
+		<type>animation</type>
+		<loader>SpritesheetResourceLoader</loader>
+		<file>themes/animations/red-bomberman.png</file>
+	</resource>
+
+	<resource>
+		<id>blue-bomberman</id>
+		<type>animation</type>
+		<loader>SpritesheetResourceLoader</loader>
+		<file>themes/animations/blue-bomberman.png</file>
+	</resource>
+</resources>
