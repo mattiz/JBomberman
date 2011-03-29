@@ -13,7 +13,7 @@ Run with the shell script startgame.sh
 Create projects for your IDE:
 -------------------------------
 Intellij IDEA	: mvn idea:idea
-Eclipse		: mvn eclipse:eclipse
+Eclipse		: mvn eclipse:eclipse -Darch=<arch>
 
 
 --------------------------------
