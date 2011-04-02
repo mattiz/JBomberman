@@ -9,7 +9,7 @@ import org.newdawn.slick.*;
  *
  * @author Mathias Bjerke <mathias@verida.no>
  */
-public interface ResourceManager {
+public interface ThemeResourceManager {
 	public Image getImageById( String id );
 	public Animation getAnimationById( String id );
 	public Sound getSoundById( String id );

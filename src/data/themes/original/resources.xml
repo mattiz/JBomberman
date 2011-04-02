@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resources>
-	<title>JBomberman</title>
+	<title>Original Bomberman</title>
+	<author>Interplay</author>
+	<version>1.0</version>
 
 	<resource>
-		<id>red-bomberman</id>
-		<type>animation</type>
-		<loader>SpritesheetResourceLoader</loader>
-		<file>themes/animations/red-bomberman.png</file>
+		<id>field0</id>
+		<type>image</type>
+		<loader>PcxImageResourceLoader</loader>
+		<file>RES/FIELD0.PCX</file>
 	</resource>
 
 	<resource>
-		<id>blue-bomberman</id>
-		<type>animation</type>
-		<loader>SpritesheetResourceLoader</loader>
-		<file>themes/animations/blue-bomberman.png</file>
+		<id>mainmenu</id>
+		<type>image</type>
+		<loader>PcxImageResourceLoader</loader>
+		<file>RES/MAINMENU.PCX</file>
+	</resource>
+
+	<resource>
+		<id>bringiton</id>
+		<type>sound</type>
+		<loader>RssSoundResourceLoader</loader>
+		<file>SOUND/BRINGITON.RSS</file>
 	</resource>
 </resources>

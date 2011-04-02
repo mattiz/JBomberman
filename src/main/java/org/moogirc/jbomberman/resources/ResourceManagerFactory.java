@@ -2,6 +2,7 @@ package org.moogirc.jbomberman.resources;
 
 
 import java.io.*;
+import java.util.*;
 
 
 /**
@@ -11,12 +12,22 @@ import java.io.*;
  */
 public class ResourceManagerFactory {
 	/**
+	 * Find all themes under a given folder structure
+	 * @param themeDirectory the directory where we should search for themes
+	 * @return a list of themes
+	 */
+	public List<Theme> getThemes( File themeDirectory ) {
+		return null;
+	}
+
+
+	/**
 	 * Create a resource manager from a resources.xml file.
-	 * @param xmlResourceFilename The resource.xml file where we load resources
+	 * @param theme The theme we want to load
 	 * @param eagerLoading set to true if you want to load all resources in memory, false if not
 	 * @return a newly constructed resource manager
 	 */
-	public ResourceManager createResourceManager( File xmlResourceFilename, boolean eagerLoading ) {
+	public ThemeResourceManager createResourceManager( Theme theme, boolean eagerLoading ) {
 		return null;
 	}
 }

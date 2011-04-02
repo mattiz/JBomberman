@@ -2,18 +2,27 @@
 
 <resources>
 	<title>JBomberman</title>
+	<author>MooG Crew</author>
+	<version>1.0</version>
 
 	<resource>
-		<id>red-bomberman</id>
-		<type>animation</type>
-		<loader>SpritesheetResourceLoader</loader>
-		<file>themes/animations/red-bomberman.png</file>
+		<id>field0</id>
+		<type>image</type>
+		<loader>PngImageResourceLoader</loader>
+		<file>images/field0.png</file>
 	</resource>
 
 	<resource>
-		<id>blue-bomberman</id>
-		<type>animation</type>
-		<loader>SpritesheetResourceLoader</loader>
-		<file>themes/animations/blue-bomberman.png</file>
+		<id>mainmenu</id>
+		<type>image</type>
+		<loader>PngImageResourceLoader</loader>
+		<file>images/mainmenu.png</file>
+	</resource>
+
+	<resource>
+		<id>bringiton</id>
+		<type>sound</type>
+		<loader>Mp3SoundResourceLoader</loader>
+		<file>sounds/bringiton.mp3</file>
 	</resource>
 </resources>
