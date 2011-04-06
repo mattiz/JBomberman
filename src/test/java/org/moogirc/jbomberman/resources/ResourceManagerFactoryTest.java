@@ -28,7 +28,7 @@ public class ResourceManagerFactoryTest {
 		Theme theme1;
 		Theme theme2;
 
-		themes = resourceManagerFactory.getThemes( new StubFileLister( new File( "data/themes" ) ) );
+		themes = resourceManagerFactory.getThemes( new FakeFileLister( new File( "data/themes" ) ) );
 		
 		assertEquals( themes.size(), 2 );
 

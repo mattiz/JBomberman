@@ -5,7 +5,7 @@ import java.io.*;
 
 
 /**
- * Description
+ * List and open files in the file system
  *
  * @author Mathias Bjerke <mathias@verida.no>
  */

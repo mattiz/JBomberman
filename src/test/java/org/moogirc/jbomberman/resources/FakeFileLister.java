@@ -9,25 +9,25 @@ import java.io.*;
  *
  * @author Mathias Bjerke <mathias@verida.no>
  */
-public class StubFileLister implements FileLister {
+public class FakeFileLister implements FileLister {
 	private File file;
 
 
-	public StubFileLister( File file ) {
+	public FakeFileLister( File file ) {
 		this.file = file;
 	}
 
 
 	public FileLister[] listFiles() {
 		return new FileLister[] {
-			new StubFileLister( new File( file, "original" ) ),
-			new StubFileLister( new File( file, "jbomberman" ) )
+			new FakeFileLister( new File( file, "original" ) ),
+			new FakeFileLister( new File( file, "jbomberman" ) )
 		};
 	}
 	
 
 	public FileLister getChild( String child ) {
-		return new StubFileLister( new File( file, "resources.xml" ) );
+		return new FakeFileLister( new File( file, "resources.xml" ) );
 	}
 
 
