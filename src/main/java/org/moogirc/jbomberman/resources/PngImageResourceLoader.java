@@ -2,7 +2,6 @@ package org.moogirc.jbomberman.resources;
 
 
 import org.newdawn.slick.*;
-import java.io.*;
 
 
 /**
@@ -11,7 +10,7 @@ import java.io.*;
  * @author Mathias Bjerke <mathias@verida.no>
  */
 public class PngImageResourceLoader implements ResourceLoader<Image> {
-	public Image load( File filename ) {
+	public Image load( FileLister filename ) {
 		return null;
 	}
 }

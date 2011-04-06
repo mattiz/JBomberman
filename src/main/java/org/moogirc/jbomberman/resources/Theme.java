@@ -1,9 +1,6 @@
 package org.moogirc.jbomberman.resources;
 
 
-import java.io.*;
-
-
 /**
  * This class represents a theme
  *
@@ -13,10 +10,10 @@ public class Theme {
 	private String name;
 	private String author;
 	private String version;
-	private File resourceFile;
+	private FileLister resourceFile;
 
 
-	public Theme( String name, String author, String version, File resourceFile ) {
+	public Theme( String name, String author, String version, FileLister resourceFile ) {
 		this.name = name;
 		this.author = author;
 		this.version = version;
@@ -39,7 +36,7 @@ public class Theme {
 	}
 
 
-	public File getResourceFile() {
+	public FileLister getResourceFile() {
 		return resourceFile;
 	}
 }
