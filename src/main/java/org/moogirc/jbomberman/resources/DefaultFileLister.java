@@ -28,7 +28,7 @@ public class DefaultFileLister implements FileLister {
 			files.add( new DefaultFileLister( f ) );
 		}
 
-		return files.toArray( new FileLister[0] );
+		return files.toArray( new FileLister[ files.size() ] );
 	}
 
 
@@ -37,7 +37,6 @@ public class DefaultFileLister implements FileLister {
 
 		files = file.listFiles( new FilenameFilter() {
 			public boolean accept( File file, String s ) {
-				System.out.println( "S: " + child );
 				return s.equals( child );
 			}
 		});
