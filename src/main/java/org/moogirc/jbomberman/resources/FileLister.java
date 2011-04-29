@@ -14,4 +14,5 @@ public interface FileLister {
 	public FileLister getChild( String child );
 	public String getPath();
 	public Reader openReader();
+	public FileLister getParentFile();
 }

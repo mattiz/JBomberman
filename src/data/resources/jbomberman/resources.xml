@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resourceBundle>
+	<name>JBomberman</name>
+	<author>MooG Crew</author>
+	<version>1.0</version>
+
+	<resources>
+		<resource>
+			<id>field0</id>
+			<type>image</type>
+			<loader>PngImageResourceLoader</loader>
+			<file>images/field0.png</file>
+		</resource>
+
+		<resource>
+			<id>mainmenu</id>
+			<type>image</type>
+			<loader>PngImageResourceLoader</loader>
+			<file>images/mainmenu.png</file>
+		</resource>
+
+		<resource>
+			<id>bringiton</id>
+			<type>sound</type>
+			<loader>Mp3SoundResourceLoader</loader>
+			<file>sounds/bringiton.mp3</file>
+		</resource>
+	</resources>
+</resourceBundle>

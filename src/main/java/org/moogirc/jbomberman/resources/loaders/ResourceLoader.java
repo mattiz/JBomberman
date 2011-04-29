@@ -1,4 +1,7 @@
-package org.moogirc.jbomberman.resources;
+package org.moogirc.jbomberman.resources.loaders;
+
+
+import org.moogirc.jbomberman.resources.*;
 
 
 /**

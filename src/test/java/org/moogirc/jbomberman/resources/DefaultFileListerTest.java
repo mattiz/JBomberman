@@ -3,14 +3,11 @@ package org.moogirc.jbomberman.resources;
 
 import org.junit.*;
 
-import java.io.*;
-import java.util.*;
-
 import static org.junit.Assert.*;
 
 
 /**
- * Tests for the class ResourceManagerFactory
+ * Tests for the class ResourceBundleFactory
  *
  * @author Mathias Bjerke <mathias@verida.no>
  */

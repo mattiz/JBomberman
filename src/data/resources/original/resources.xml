@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resourceBundle>
+	<name>Original Bomberman</name>
+	<author>Interplay</author>
+	<version>1.0</version>
+
+	<resources>
+		<resource>
+			<id>field0</id>
+			<type>image</type>
+			<loader>PcxImageResourceLoader</loader>
+			<file>RES/FIELD0.PCX</file>
+		</resource>
+
+		<resource>
+			<id>mainmenu</id>
+			<type>image</type>
+			<loader>PcxImageResourceLoader</loader>
+			<file>RES/MAINMENU.PCX</file>
+		</resource>
+
+		<resource>
+			<id>bringiton</id>
+			<type>sound</type>
+			<loader>RssSoundResourceLoader</loader>
+			<file>SOUND/BRINGITON.RSS</file>
+		</resource>
+	</resources>
+</resourceBundle>

@@ -50,6 +50,11 @@ public class DefaultFileLister implements FileLister {
 	}
 
 
+	public FileLister getParentFile() {
+		return new DefaultFileLister( file.getParentFile() );
+	}
+
+
 	public Reader openReader() {
 		Reader reader = null;
 
